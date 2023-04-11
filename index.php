@@ -17,6 +17,7 @@
     <style>
         .card {
             margin-bottom: 20px;
+            padding-bottom: 30px;
         }
 
         #kartu {
@@ -30,11 +31,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fas fa-clipboard-list"></i> Data Komunitas</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="add.php"><i class="fa-solid fa-plus"></i> Tambah Data Komunitas</a>
                     </li>
@@ -42,6 +43,7 @@
             </div>
         </div>
     </nav>
+
     <div class="album py-5 bg-light">
         <script>
             function hapusData(id) {
@@ -84,11 +86,12 @@
                                     <p class="card-text"><?= substr($row['deskripsi'], 0, 90) . '...' ?></p>
                                     <p class="card-text"><?= $row['alamat'] ?></p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
+                                        <div class="d-flex justify-content-between">
                                             <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#myModal<?= $row['id'] ?>">Lihat</button>
                                             <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
                                             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="hapusData(<?php echo $row['id']; ?>)">Hapus</button>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

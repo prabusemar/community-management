@@ -39,3 +39,62 @@ footer {
     overflow-y: auto;
     padding-right: 30px;
 }
+.card-body .btn-group {
+    display: flex;
+    flex-direction: row;
+}
+
+/* CSS untuk ukuran layar kecil */
+@media screen and (max-width: 576px) {
+
+    /* Atur lebar kartu menjadi 100% */
+    #kartu {
+        width: 100%;
+    }
+}
+
+/* CSS untuk ukuran layar sedang */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+
+    /* Atur lebar kartu menjadi 50% */
+    #kartu {
+        width: 50%;
+    }
+}
+
+/* CSS untuk ukuran layar besar */
+@media screen and (min-width: 992px) {
+
+    /* Atur lebar kartu menjadi 33.33% */
+    #kartu {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 767px) {
+    #kartu {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-img-top {
+        height: 200px;
+        
+    }
+
+    .modal-lg {
+        max-width: 90%;
+    }
+}
